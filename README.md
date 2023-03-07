@@ -1,5 +1,5 @@
-<h1 align="center">Hi 👋, I'm My name is Jesus Manuel Macias Martinez, and I'm a backend developer from Colombia.</h1>
-<h3 align="center">I have a passion for building scalable and robust systems. I have experience in building RESTful APIs, database design, software architecture, etc. I'm always looking to learn new things and improve my skills.</h3>
+<h1 align="center">Hi 👋, I'm My name is Jesus Manuel Macias Martinez,</h1>
+<h3 align="center"> I'm a backend developer from Colombia.</h3>
 
 - 🔭 I’m currently working on [Agroland](https://github.com/Ragnar9902/AgroLand)
 
