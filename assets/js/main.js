@@ -54,3 +54,45 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+const email = {
+  to: 'jesusmanuel.maciasmartinez@gmail.com',
+  from: 'your_email@example.com',
+  subject: 'New Message from Your Website',
+  html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`
+};
+
+sgMail.send(email)
+  .then(() => console.log('Email sent'))
+  .catch(error => console.error(error.toString()));
+$('#contact-form').submit(function(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+
+  const name = $('#name').val();
+  const email = $('#email').val();
+  const message = $('#message').val();
+
+  // Use the SendGrid API to send the email
+  const sgMail = require('@sendgrid/mail');
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+  const email = {
+    to: 'jesusmanuel.maciasmartinez@gmail.com',
+    from: email,
+    subject: 'New Message from Your Website',
+    html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`
+  };
+
+  sgMail.send(email)
+    .then(() => {
+      alert('Your message has been sent.');
+      $('#contact-form')[0].reset();
+    })
+    .catch(error => {
+      console.error(error.toString());
+      alert('There was an error sending your message. Please try again later.');
+    });
+});
