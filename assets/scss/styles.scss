@@ -299,19 +299,22 @@ img{
         border-radius: .5rem;
         z-index: var(--z-back);
     }
-    &__html{
+    &__go{
         width: 95%;
     }
-    &__css{
+    &__docker{
         width: 85%;
     }
     &__js{
         width: 65%;
     }
-    &__ux{
+    &__linux{
         width: 85%;
     }
-    &__img{
+    &__python{
+        width: 85%;
+    }
+    &__c{
         border-radius: .5rem;
     }
 }
